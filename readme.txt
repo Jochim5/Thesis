@@ -7,5 +7,6 @@ you can calculate similarity reward in examples/comparison/compare_robot.py you 
 you can run  run_ppo.py to get optimal Control law just Change the robot Name
 
 youcan find the DDM here"https://drive.google.com/drive/folders/1u-U5PFAJCK79j2kkuihnlN3i9xos03g-?usp=sharing"
-put it into protein-sedd-main\exp_local
+create a protein-sedd-main\exp_local folder and put the 2025.03.09 into it
+put custom_data.txt and merges.txt in to protein-sedd-main
 
