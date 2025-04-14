@@ -23,7 +23,9 @@ if __name__ == "__main__":
     parser.add_argument('--num-cores', type=int, default=3, help='Number of robots to evaluate simultaneously (default: 3)')
     add_ppo_args(parser)
     parser.add_argument("--mode", type=str, default="original", help="Choose from: original, one, fast")
-
+    parser.add_argument("--robot_path", type=str, default="C:\\d_pan\\PythonProject\\pythonProject\\pythonProject\\evogym-design-tool-main\\evogym-design-tool-main\\src\\exported\\speed_bot.json", help="Path to template robot JSON")
+    parser.add_argument("--template_path", type=str, default="C:\\d_pan\\PythonProject\\pythonProject\\pythonProject\\evogym-design-tool-main\\evogym-design-tool-main\\src\\exported\\robot_Q.json", help="Path to template robot JSON")
+    
     args = parser.parse_args()
 
     if args.mode == "original":
