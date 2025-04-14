@@ -95,8 +95,8 @@ def run_compare_ga(
 
     # generate a population
     if not is_continuing:
-        robot_path = "C:\\d_pan\\PythonProject\\pythonProject\\pythonProject\\evogym-design-tool-main\\evogym-design-tool-main\\src\\exported\\robot_Q.json"
-        template_path = "C:\\d_pan\\PythonProject\\pythonProject\\pythonProject\\evogym-design-tool-main\\evogym-design-tool-main\\src\\exported\\best_walk_robot.json"
+        robot_path =  args.robot_path
+        template_path = args.template_path
         temp_structure = load_robot_from_json(robot_path)
         template_robot, _ = load_robot_from_json(template_path)  # 只获取模板机器人的体素矩阵
         # 将第一个机器人添加到种群中
