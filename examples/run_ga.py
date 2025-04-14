@@ -14,6 +14,7 @@ if __name__ == "__main__":
     np.random.seed(seed)
 
     parser = argparse.ArgumentParser(description='Arguments for ga script')
+    parser.add_argument("--mode", type=str, default="original", help="Choose from: original, one, fast")
     parser.add_argument('--exp-name', type=str, default='test_ga', help='Name of the experiment (default: test_ga)')
     parser.add_argument('--env-name', type=str, default='Walker-v0', help='Name of the environment (default: Walker-v0)')
     parser.add_argument('--pop-size', type=int, default=3, help='Population size (default: 3)')
@@ -25,14 +26,9 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    args.exp_name = "hand_design_experiment"
-    args.env_name = "Walker-v0"
-    args.pop_size = 10
-    args.structure_shape = (5, 5)
-    args.max_evaluations = 300
-    args.num_cores = 9
-
-    # 调用 run_ga
-    #run_ga(args)
-    #run_one_ga(args)
-    run_compare_ga(args)
+   if args.mode == "original":
+        run_ga(args)
+    elif args.mode == "one":
+        run_one_ga(args)
+    elif args.mode == "fast":
+        run_compare_ga(args)
