@@ -95,7 +95,7 @@ def run_one_ga(
 
     # generate a population
     if not is_continuing:
-        robot_path = "C:\\d_pan\\PythonProject\\pythonProject\\pythonProject\\evogym-design-tool-main\\evogym-design-tool-main\\src\\exported\\robot_Q.json"
+        robot_path = args.template_path
         temp_structure = load_robot_from_json(robot_path)
 
         # 将第一个机器人添加到种群中
