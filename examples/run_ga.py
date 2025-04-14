@@ -14,7 +14,6 @@ if __name__ == "__main__":
     np.random.seed(seed)
 
     parser = argparse.ArgumentParser(description='Arguments for ga script')
-    parser.add_argument("--mode", type=str, default="original", help="Choose from: original, one, fast")
     parser.add_argument('--exp-name', type=str, default='test_ga', help='Name of the experiment (default: test_ga)')
     parser.add_argument('--env-name', type=str, default='Walker-v0', help='Name of the environment (default: Walker-v0)')
     parser.add_argument('--pop-size', type=int, default=3, help='Population size (default: 3)')
@@ -23,10 +22,11 @@ if __name__ == "__main__":
                     help='Maximum number of robots that will be evaluated (default: 6)')
     parser.add_argument('--num-cores', type=int, default=3, help='Number of robots to evaluate simultaneously (default: 3)')
     add_ppo_args(parser)
+    parser.add_argument("--mode", type=str, default="original", help="Choose from: original, one, fast")
 
     args = parser.parse_args()
 
-   if args.mode == "original":
+    if args.mode == "original":
         run_ga(args)
     elif args.mode == "one":
         run_one_ga(args)
