@@ -95,7 +95,7 @@ def run_one_ga(
 
     # generate a population
     if not is_continuing:
-        robot_path = args.template_path
+        robot_path = args.robot_path
         temp_structure = load_robot_from_json(robot_path)
 
         # 将第一个机器人添加到种群中
